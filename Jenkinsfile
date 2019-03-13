@@ -27,7 +27,7 @@ pipeline{
 		
 		stage("Code Analysis"){
             steps{
-                echo 'This job runs unit tests on Java Spring reference application.'
+                echo 'This job runs SonarQube code quality testing.'
                 sh "mvn sonar:sonar"
             }  
         }
