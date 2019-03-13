@@ -67,7 +67,7 @@ ansible-playbook -i /opt/playbooks/hosts create_docker_container_demo.yml''', ex
             echo "This will always run"
 	    archiveArtifacts "target/**/*"
             junit 'target/surefire-reports/*.xml'
-	    publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'coverage', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '']) 
+	    publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'target/surefire-reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '']) 
         }
         success{
             echo "This will run only if successful"
