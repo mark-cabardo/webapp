@@ -65,6 +65,8 @@ ansible-playbook -i /opt/playbooks/hosts create_docker_container_demo.yml''', ex
     post{
         always{
             echo "This will always run"
+	    archiveArtifacts "target/**/*"
+            junit 'target/surefire-reports/*.xml'
         }
         success{
             echo "This will run only if successful"
