@@ -30,7 +30,7 @@
     <testResources>
         <testResource>
             <!-- declared explicitly so Spring config files can be placed next to their corresponding JUnit test class  -->
-            <directory>${project.basedir}/src/main/webapp/test/java/com.demo.examples</directory>
+            <directory>${project.basedir}/src/test/java/com.demo.examples</directory>
         </testResource>
     </testResources>
     <finalName>webapp</finalName>
